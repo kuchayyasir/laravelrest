@@ -60,7 +60,7 @@ class CategoryController extends Controller
     public function show(Category $category)
     {
         //Get the Category
-        $category = Category::findOrfail((int)$category->id);
+        $category = Category::findOrfail($category->id);
         // Return a single Category
         return new CategoryResource($category);
     }
@@ -85,7 +85,7 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        $category = Category::findOrFail((int)$category->id);
+        $category = Category::findOrFail($category->id);
         $category->name = $request->input('name');
         //$category->description = $request->input('description');
         if($category->save()) {
@@ -104,7 +104,7 @@ class CategoryController extends Controller
         //
         
         //Get the Category
-        $category = Category::findOrfail((int)$category->id);
+        $category = Category::findOrfail($category->id);
  
         if($category->delete()) {
             return new CategoryResource($category);

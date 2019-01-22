@@ -28,6 +28,9 @@ class User extends Authenticatable implements JWTSubject
     protected $hidden = [
         'password', 'remember_token',
     ];
+    protected $casts = [
+        'id' => 'integer',
+    ];
         /**
      * Get the identifier that will be stored in the subject claim of the JWT.
      *
