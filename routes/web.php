@@ -32,7 +32,7 @@ Route::get('contact', function()
  *
  *
  * */
-Route::get('admin/login', function()
+Route::get('admin', function()
 {
     return View::make('admin.auth.login');
 });

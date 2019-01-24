@@ -16,7 +16,8 @@ class AuthController extends Controller
     public function register(Request $request)
     {
         $user = User::create([
-            'name' => $request->name,
+            'firstName' => $request->firstName,
+            'lastName' => $request->firstName,
             'email' => $request->email,
             'password' => bcrypt($request->password),
         ]);
